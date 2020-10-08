@@ -22,7 +22,7 @@ class CreateImageViewView(CreateView):
     template_name = "post.html"
     success_url = reverse_lazy('home')
 
-class UserViewSet(viewsets.ModelViewSet):
+class UserViewSet(viewsets.ModelViewSet): # Views of this form are for the GET api
     """
     API endpoint that allows users to be viewed or edited.
     """
