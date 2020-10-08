@@ -3,22 +3,22 @@
 from django.views.generic import ListView, CreateView
 from django.urls import reverse_lazy
 
-from .forms import PostForm
-from .models import Post
+from .forms import ImageViewForm
+from .models import ImageView
 
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from polls.serializers import UserSerializer, GroupSerializer, PostSerializer
+from polls.serializers import UserSerializer, GroupSerializer, ImageViewSerializer
 
 
 class HomePageView(ListView):
-    model = Post
+    model = ImageView
     template_name = 'home.html'
 
-class CreatePostView(CreateView):
-    model = Post
-    form_class = PostForm
+class CreateImageViewView(CreateView):
+    model = ImageView
+    form_class = ImageViewForm
     template_name = "post.html"
     success_url = reverse_lazy('home')
 
@@ -40,10 +40,10 @@ class GroupViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
 
-class PostViewSet(viewsets.ModelViewSet):
+class ImageViewViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
+    queryset = ImageView.objects.all()
+    serializer_class = ImageViewSerializer
     permission_classes = [permissions.IsAuthenticated]

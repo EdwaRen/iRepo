@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from .models import Post
+from .models import ImageView
 from rest_framework import serializers
 
 
@@ -15,7 +15,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'name']
 
 
-class PostSerializer(serializers.HyperlinkedModelSerializer):
+class ImageViewSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Post
+        model = ImageView
         fields = ['title', 'price', 'sold', 'discount', 'cover']

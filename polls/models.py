@@ -3,8 +3,8 @@ from django.utils.html import mark_safe
 from decimal import Decimal
 
 
-class Post(models.Model):
-    price = models.DecimalField(decimal_places = 2, max_digits=4)
+class ImageView(models.Model):
+    price = models.DecimalField(decimal_places = 4, max_digits=6)
     title = models.TextField(default="")
     sold = models.BooleanField(default=False)
     discount = models.DecimalField(decimal_places = 2, max_digits=4)

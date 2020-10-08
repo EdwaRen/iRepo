@@ -1,8 +1,8 @@
 from django import forms
-from .models import Post
+from .models import ImageView
 
-class PostForm(forms.ModelForm):
+class ImageViewForm(forms.ModelForm):
 
     class Meta:
-        model = Post
+        model = ImageView
         fields = ['title', 'price', 'sold', 'discount', 'cover']
