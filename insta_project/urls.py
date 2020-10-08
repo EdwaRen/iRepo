@@ -19,7 +19,7 @@ from django.urls import path, include # new
 from django.conf.urls.static import static # new
 
 from rest_framework import routers
-from polls import views
+from imagerepo import views
 
 
 router = routers.DefaultRouter()
@@ -29,7 +29,7 @@ router.register(r'imageviews', views.ImageViewViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('polls.urls')), # new
+    path('', include('imagerepo.urls')), # new
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

@@ -9,7 +9,7 @@ from .models import ImageView
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from polls.serializers import UserSerializer, GroupSerializer, ImageViewSerializer
+from imagerepo.serializers import UserSerializer, GroupSerializer, ImageViewSerializer
 
 
 class HomePageView(ListView):

@@ -4,7 +4,7 @@ from decimal import Decimal
 
 
 class ImageView(models.Model):
-    price = models.DecimalField(decimal_places = 4, max_digits=6)
+    price = models.DecimalField(decimal_places = 2, max_digits=6)
     title = models.TextField(default="")
     sold = models.BooleanField(default=False)
     discount = models.DecimalField(decimal_places = 2, max_digits=4)

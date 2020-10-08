@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls.apps.PollsConfig', # new
+    'imagerepo.apps.ImageRepoConfig', # new
     'rest_framework',
     'crispy_forms',
 ]
